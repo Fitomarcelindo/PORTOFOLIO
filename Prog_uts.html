@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="hal1.css">
+  <title>Portofolio</title>
+  <style>
+    .icon {font-size: 1rem;}
+    .captcha
+    { font: italic bold 16px "Arial", cursive, sans-serif; 
+    color:#a0a0a0;background-color:#c0c0c0;
+    width:100px;border-radius: 5px;
+    text-align:center;
+    text-decoration:line-through;
+    }
+    .errmsg
+    {color:#ff0000;}
+    </style>
+    <!-- finish style -->
+    <script>
+      var captcha= new Array ();
+      function validateRecaptcha(){
+          var recaptcha= document.getElementById("recaptcha").value;;
+          var validRecaptcha=0;
+          for(var z=0; z<6; z++){
+              if(recaptcha.charAt(z)!= captcha[z]){
+                  validRecaptcha++;
+              }
+          }
+          if (recaptcha == ""){
+              document.getElementById('errCaptcha').innerHTML = 'Re-Captcha must be filled';
+          } else if (validRecaptcha>0 || recaptcha.length>6){
+              document.getElementById('errCaptcha').innerHTML = 'Sorry, Wrong Re-Captcha';
+          } else{
+              document.getElementById('errCaptcha').innerHTML = 'OK';
+          }
+      }
+      function createCaptcha(){
+          for(q=0; q<6 ; q++){
+              if(q %2 ==0){
+                  captcha[q] = String.fromCharCode(Math.floor((Math.random()*26)+65));
+              }else{      
+                  captcha[q] = Math.floor((Math.random()*10)+0);
+              }
+          }
+          thecaptcha=captcha.join("");
+          document.getElementById('captcha').innerHTML=
+           "<span class='captcha'> " + thecaptcha+ " </span>" + "  <a onclick='createCaptcha()' href='#'>recaptcha</a>"; 
+      }
+      </script>
+      <!-- finish js -->
+
+</head>
+
+<body class="is-preload">
+  <!-- Wrapper -->
+  <div id="wrapper">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="Prog_uts.html" style="font-style:bold;">Fitto Marcellindo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-light px-sm-5">
+        <h5 class="text-dark">Home</h5>
+        <span class="text-muted">Accesbilty Button</span><br>
+        <span class="icon text-base font-semibold text-primary" onclick="setdarkmode(false)"> 💡 Light Mode </span>
+        <span class="icon text-base font-semibold text-primary" onclick="setdarkmode(true)"> 💡 Dark Mode </span>
+        <div class=" navbar-collapse list-group"   
+        id="navbarCenteredExample" align="center">
+          <nav class="navbar col-md-1">
+            <ul class="widget-adnan">
+              <li class="list-group-horizontal me-sm-1"><a href="Prog_uts.html" class="text-dark">HOME</a></li>
+              <li class="list-group-horizontal me-sm-1"><a href="education.html" class="text-dark">MY EDUCATION</a></li>
+              <li class="list-group-horizontal me-sm-1"><a href="schedule.html" class="text-dark">SCHEDULE</a></li>
+              <li class="list-group-horizontal me-sm-1"><a href="activity.html" class="text-dark">ACTIVITY</a></li>
+              <li class="list-group-horizontal me-sm-1"><a href="portofolio.html" class="text-dark">PORTOFOLIO</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- Nav Bar finish -->
+    <!-- section pagae 1 -->
+    <section class="jumbotron text-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,256L60,229.3C120,203,240,149,360,133.3C480,117,600,139,720,154.7C840,171,960,181,1080,176C1200,171,1320,149,1380,138.7L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+      <div class="container">
+        <div id="header" class="flex flex-wrap">
+          <div class="w-full self-center px-4">
+            <h1 class="text-base font-semibold text-primary"> Halo Everyone <a style="font-size:25px;">🙌🙌 </a> I m <br>
+            <span class="block font-bold text-dark text-4xl mt-1"> Fitto Martcellindo</span></h1>
+            <h3 class=" text-slate-500 mb-5 ">Mahasiswa || Front End Developer || Design </h3>
+            <p class="font-medium text-slate-400 mb-10 leading-relaxed"> Welcome to my gallery, semoga nyaman dengan
+              user inter face yang kalian lihat 😉 </p>
+              <img src="projects/fito.jpg" alt="fitomarcel" width="250" class="rounded-pill thumbnail border border-primary border border-3">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- finish -->
+    
+    <!-- about start -->
+    <section id="about">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h2> About Me</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center fs-5 text-center">
+          <div class="col-md-4">
+            <p> I am the 3 rd of 4 children I was Born in Bandar Lampung City, Lampung province, I'm 20 years old and am studying at an institute in west Jakarta which is the beloved Campus the Institut Teknologi PLN.,</p>
+          </div>
+          <div class="col-md-4">
+            <p>Recently, i'm so diffcult to participate in several competitions, the name are KTI, and Gemastik competitions my position be a animation division, and master and the soft kill I've is completed the LDKM team the name is the article review team and the HIMAKA Constitution
+            </p>
+          </div>
+        </div>
+      </div>
+     
+    </section>
+    <!-- about finish -->
+
+    <!-- section project -->
+    <section id="projects">
+      <div class="container">
+        <div class="row text-center mb-0">
+          <div class="col mb-0">
+            <h2> My Projects </h2>
+          </div>
+        </div>
+        <div class="row justify-content-center mb-0">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="projects/pict1.png" class="card-img-top" alt="projects 1">
+              <div class="card-body">
+                <p class="card-text text-dark">this is one of my projects that I created for the gemastik race, but this is not the original photo for the file in the race laptop, but more or less my design is like that </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="projects/gedung2.jpg" class="card-img-top" alt="projects 2">
+              <div class="card-body">
+                <p class="card-text text-dark">on this project is part of my race project, i.e. this is a highway scene that will be tagged for the story telling scheme</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="projects/design_baju.jpg" class="card-img-top" alt="projects 3">
+              <div class="card-body">
+                <p class="card-text text-dark">And this is one of the shirt designs I made for the Liman Cup event And this product is an image of collaboration between me and my friend Naufal Adli</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="projects/Capture.JPG" class="card-img-top" alt="projects 4">
+              <div class="card-body">
+                <p class="card-text text-dark"> this is a hospital anterian form I created for the fulfillment of web programming course assignments</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="projects/logobaju.png" class="card-img-top" alt="projects 5">
+              <div class="card-body">
+                <p class="card-text text-dark">for this emblem is a work by me and a friend that I made for the LIMAN CUP event, which is a lampung student association event, which is an example of the basis I took from the BRI Liga 1 logo, namely on the logo is an elephant vector And this product is an image of collaboration between me and my friend Naufal Adli </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="finis">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,256L60,229.3C120,203,240,149,360,133.3C480,117,600,139,720,154.7C840,171,960,181,1080,176C1200,171,1320,149,1380,138.7L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+    </div>
+    <!-- section project finish -->
+
+    <!-- section contatc -->
+    <section id="contact">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h2 > Contact Me</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center mb-3">
+          <div class="col-md-6">
+            <form>
+              <div class="mb-3">
+                <label for="Nama" class="form-label">Nama</label>
+                <input type="Nama" class="form-control" id="inputNama" aria-describedby="NamaHelp" required autocomplete="off">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" pattern=",@">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <table>
+                <tr><td>Captcha : </td>
+                    <td id="captcha">
+                    <script> createCaptcha(); </script>
+                    </td>
+                  </tr> 
+                <tr>
+                    <td>Type Captcha : </td>
+                    <td><input type="text" name="recaptcha" id="recaptcha" placeholder="Type the captcha" class="rounded border border-1 border-primary"/></td>
+                    <td id="errCaptcha" class="errmsg mt-2 rounded"></td>
+                    <hr>
+                </tr>
+                <tr>
+                    <td colspan="2"><br>
+                      <input type="radio" id="check" name="fav_language" value="check">
+                          <label for="html" class="font-semibold">I am Not Robot
+                            </label><br><br>
+                            <input type="button" value="Check Captcha" onClick="validateRecaptcha()" class="text-white bg-primary rounded border-white"/>
+                    </td>
+                </tr>
+                </table>
+                <div class="btn-group mt-3">
+                  <a href="submit.html" class="btn btn-primary active" aria-current="page">Send an Answer</a>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,192L48,208C96,224,192,256,288,256C384,256,480,224,576,197.3C672,171,768,149,864,160C960,171,1056,213,1152,208C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    </section>
+    <!-- section finish contact -->
+    <!-- section footer -->
+    <footer>
+      <div class="footer-bottom bg-primary py-2 w-100 text-center">
+        <p class="m-0 text-white semi-bold fs-5"> Copyright @fitomarcel </p>
+      </div>
+    </footer>
+    <!-- footer finish -->
+
+  <!-- start mode -->
+    <style>
+      #darkmode{
+        background: rgb(77, 76, 76);
+        color: white;
+      }
+    </style>
+
+    <script> 
+      function setdarkmode(isdark) {
+
+        if(isdark) {
+            document.body.setAttribute('id', 'darkmode')
+        } else {
+            document.body.setAttribute('id', '')
+        }
+
+      }
+    </script>
+  <!-- finish mode -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+  </div>
+</body>
+</html>

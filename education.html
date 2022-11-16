@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDUCATION</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="education.css" />
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section id="navbar">
+        <nav class="navbar navbar-dark bg-primary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-style: bold"
+              >EDUCATION</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent"
+              aria-controls="navbarToggleExternalContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </nav>
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-light px-sm-5">
+            <h5 class="text-dark">Home</h5>
+            <span class="text-muted">Accesbilty Button</span><br />
+            <span
+              class="icon text-base font-semibold text-primary"
+              onclick="setdarkmode(false)"
+            >
+              💡 Light Mode
+            </span>
+            <span
+              class="icon text-base font-semibold text-primary"
+              onclick="setdarkmode(true)"
+            >
+              💡 Dark Mode
+            </span>
+            <div
+              class="navbar-collapse list-group"
+              id="navbarCenteredExample"
+              align="center"
+            >
+              <nav class="navbar col-md-1">
+                <ul class="widget-adnan">
+                  <li class="list-group-horizontal me-sm-1">
+                    <a href="Prog_uts.html" class="text-dark">HOME</a>
+                  </li>
+                  <li class="list-group-horizontal me-sm-1">
+                    <a href="#" class="text-dark">MY EDUCATION</a>
+                  </li>
+                  <li class="list-group-horizontal me-sm-1">
+                    <a href="schedule.html" class="text-dark">SCHEDULE</a>
+                  </li>
+                  <li class="list-group-horizontal me-sm-1">
+                    <a href="activity.html" class="text-dark">ACTIVITY</a>
+                  </li>
+                  <li class="list-group-horizontal me-sm-1">
+                    <a href="portofolio.html" class="text-dark">PORTOFOLIO</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#0099ff"
+            fill-opacity="1"
+            d="M0,256L60,229.3C120,203,240,149,360,133.3C480,117,600,139,720,154.7C840,171,960,181,1080,176C1200,171,1320,149,1380,138.7L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+          ></path>
+        </svg>
+      </section>
+      <!-- batas nav bar -->
+
+      <!-- H1 -->
+      <div class="containerh1 justify-content-center">
+        <div class="row text-center">
+          <div class="col justify-content-center">
+            <h1 class="rounded justify-content-center text-primary">
+              History of Education
+            </h1>
+          </div>
+        </div>
+      </div>
+      <!-- h1 last-->
+
+      <!-- deskripsi -->
+      <section id="deskripsi mb-3">
+        <div class="row p-3 mt-3">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-base font-semibold text-primary">
+                  SMA NEGERI 07 BANDAR LAMPUNG
+                </h5>
+                <p class="card-text text-dark">
+                  SMA Negeri 7 Bandar Lampung started accepting new students in
+                  1995 (at that time it was called SMA Negeri 4 Tanjung Karang).
+                  SMA Negeri 7 Bandar Lampung was established based on the
+                  Decree of the Minister of Education and Culture No. 0558/1984
+                  dated November 20, 1984. Since its inception, it has occupied
+                  the building of SMA Negeri 2 Bandar Lampung using 4 local and
+                  since 1987 using 8 local student learning.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/4FqmxuYWXf4aGkUf9?g_st=iw"
+                  class="btn btn-primary"
+                  >Go See Location</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-base font-semibold text-primary">
+                  SMP NEGERI 28 BANDAR LAMPUNG
+                </h5>
+                <p class="card-text text-dark">
+                  SMP Negeri 28 Bandar Lampung is located in Perumanas Bukit
+                  Kemiling Permai, Kemiling Bandar Lampung District, is one of
+                  the State Junior High Schools of 31 State Junior High Schools
+                  in Bandar Lampung City, geographically the location of SMP
+                  Negeri 28 Bandar Lampung is very strategic because in addition
+                  to being in the residential complex environment, it is also at
+                  the crossing of the two-lane highway that connects Rajabasa
+                  district with Kemiling district in Bandar Lampung City
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/PEU1B2eeDa4qvGbd6?g_st=iw"
+                  class="btn btn-primary"
+                  >Go See Location</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- page 1-->
+        <div class="row p-3 mt-3">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-base font-semibold text-primary">
+                  SD NEGERI 03 BKP BANDAR LAMPUNG
+                </h5>
+                <p class="card-text text-dark">
+                  In elementary school this was the first choice I had made
+                  since childhood, even though at that time in front of my house
+                  there was an elementary school too, but I chose a school that
+                  was farther away from my home, I don't know what I thought at
+                  that time, so I chose the elementary school to study
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/4obhMmjWduiN666j8?g_st=iw"
+                  class="btn btn-primary"
+                  >Go See Location</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-base font-semibold text-primary">
+                  TK AL AZHAR 16
+                </h5>
+                <p class="card-text bg-none text-dark">
+                  Al Azhar Tanjung Karang Foundation was established on July 7,
+                  1982 based on Notarial Deed No. 26 before Notary Imran
+                  Ma'aruf, SH which is located at Jl. Jend. Ahmad Yani, No. 31
+                  Bandar Lampung, for the first time this Foundation is located
+                  at Jalan Palapa No. 7 Labuhan Ratu.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/ofeX4BCNC4W3n64R6?g_st=iw"
+                  class="btn btn-primary"
+                  >Go See Location
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- page 2-->
+        <div class="row p-3 mt-3 justify-content-center">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5
+                  class="card-title text-center text-base font-semibold text-primary"
+                >
+                  QUOTES
+                </h5>
+                <p class="card-text text-center text-dark fs-3">
+                  KEHIDUPAN ADALAH SEBUAH SENI UNTUK MELANJUTKAN JALUR REZEKI
+                  YANG TELAH DIBERI
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#0099ff"
+            fill-opacity="1"
+            d="M0,288L60,266.7C120,245,240,203,360,197.3C480,192,600,224,720,240C840,256,960,256,1080,240C1200,224,1320,192,1380,176L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+          ></path>
+        </svg>
+      </section>
+      <!-- finish deskripsi -->
+
+      <!-- Qoutes -->
+      <section id="qoutes p-3 mt-3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#0099ff"
+            fill-opacity="1"
+            d="M0,256L60,229.3C120,203,240,149,360,133.3C480,117,600,139,720,154.7C840,171,960,181,1080,176C1200,171,1320,149,1380,138.7L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+          ></path>
+        </svg>
+        <h2 class="text-center mt-3">
+          Point the Cursor to the center page below to see the image
+        </h2>
+        <p class="text-center fs-4 text-primary">
+          sorry if the picture is just so cute because my face is too cute to
+          look at
+        </p>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="projects/fotosma1.jpg" style="width: 100%" />
+            <div class="text-center text-primary">high school time photos</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="projects/fotosma2.jpg" style="width: 100%" />
+            <div class="text-center text-primary">
+              photo of the time of lifting the trophy
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="projects/fotosma3.jpg" style="width: 100%" />
+            <div class="text-center text-primary">high school time photos</div>
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+
+        <!-- The dots/circles -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#0099ff"
+            fill-opacity="1"
+            d="M0,288L60,266.7C120,245,240,203,360,197.3C480,192,600,224,720,240C840,256,960,256,1080,240C1200,224,1320,192,1380,176L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+          ></path>
+        </svg>
+      </section>
+      <!-- section footer -->
+      <footer>
+        <div class="footer-bottom bg-primary py-1 \w-100 text-center mt-0">
+          <p class="m-0 text-white semi-bold fs-5">Copyright @fitomarcel</p>
+        </div>
+      </footer>
+      <!-- footer finish -->
+
+      <!-- start mode -->
+      <style>
+        #darkmode {
+          background: rgb(77, 76, 76);
+          color: white;
+        }
+      </style>
+
+      <script>
+        function setdarkmode(isdark) {
+          if (isdark) {
+            document.body.setAttribute("id", "darkmode");
+          } else {
+            document.body.setAttribute("id", "");
+          }
+        }
+      </script>
+      <!-- finish mode -->
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+  </body>
+</html>

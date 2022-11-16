@@ -1,0 +1,56 @@
+
+#projects{
+  background-color: #0099ff;
+  padding-bottom: 0;
+}
+h2{
+  padding-top: 2rem;
+}
+h5{
+  padding-top: 2rem;
+}
+
+nav ul {
+  padding: 4;
+  list-style-type: none;
+  display: flex;
+  text-decoration: none;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  flex: 1 1 100%;
+  text-decoration: none;
+}
+nav ul li a {
+  display: block;
+  border: 2px solid;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  margin: 0.25em;
+  border-color: primary;
+  text-decoration: none;
+}
+.nav{
+  margin:auto;
+}
+.row{
+  padding-top: 5rem;
+}
+
+#contact{
+  padding-top: 0;
+  
+}
+
+/* section nav  */
+img {
+  text-align: center;
+}
+
+#projects{
+  font-family: 'Open sans'sans-serif;
+}
